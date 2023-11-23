@@ -8,8 +8,17 @@ limit:           # 5000
 noheaders:       # boolean
 show_footers:    # boolean
 matching_groups: # array
-# - '/icons/.+'
-# - '/history/.+'
+- '/user/[^/]+/gacha/index'
+- '/user/[^/]+/gacha/draw/[^/]+/[^/]+'
+- '/user/[^/]+/present/index/[^/]+'
+- '/user/[^/]+/present/receive'
+- '/user/[^/]+/item'
+- '/user/[^/]+/card/addexp/[^/]+'
+- '/user/[^/]+/card'
+- '/user/[^/]+/reward'
+- '/user/[^/]+/home'
+- '/admin/user/[^/]+/ban'
+- '/admin/user/[^/]+'
 filters:         # string
 output:		count,2xx,3xx,4xx,5xx,method,uri,min,p99,max,sum          # string(comma separated)
 pos_file:        # string
