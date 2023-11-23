@@ -76,6 +76,16 @@ func main() {
 	}
 	defer dbx.Close()
 
+	for {
+		err := dbx.Ping()
+		if err == nil {
+			break
+		}
+		log.Print(err)
+		time.Sleep(time.Second * 2)
+	}
+	log.Print("DB ready!")
+
 	e.Server.Addr = fmt.Sprintf(":%v", "8080")
 	h := &Handler{
 		DB: dbx,
