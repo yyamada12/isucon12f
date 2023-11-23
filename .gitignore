@@ -1,0 +1,6 @@
+.*
+!.gitignore
+/pprof
+/go
+/local
+webapp/sql/setup
